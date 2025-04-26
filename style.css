@@ -48,7 +48,6 @@ body {
     box-shadow: 0 12px 24px rgba(0,0,0,0.3);
   }
 
-  /* Container untuk tim */
   .team-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -96,4 +95,34 @@ body {
   @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: #007bff; }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5em;
+    }
+    #desc {
+      font-size: 1em;
+    }
+    .btn {
+      padding: 12px 30px;
+      font-size: 18px;
+    }
+    .team-container {
+      width: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2em;
+    }
+    .team-member {
+      padding: 5px;
+    }
+    .team-member p {
+      font-size: 0.9em;
+    }
   }
