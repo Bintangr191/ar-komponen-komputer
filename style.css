@@ -10,15 +10,22 @@ body {
     align-items: center;
     overflow-x: hidden;
   }
+  
+  header {
+    margin-top: 20px;
+  }
+  
   h1 {
     font-size: 3em;
     margin-bottom: 10px;
     animation: fadeIn 1s ease-in-out;
   }
+  
   .icon {
     font-size: 1.2em;
     vertical-align: middle;
   }
+  
   #desc {
     font-size: 1.2em;
     margin-bottom: 30px;
@@ -29,6 +36,7 @@ body {
     width: 0;
     animation: typing 4s steps(66, end) forwards, blink-caret 0.75s step-end infinite;
   }
+  
   .btn {
     display: inline-block;
     padding: 15px 40px;
@@ -42,12 +50,13 @@ body {
     animation: fadeIn 2s ease-in-out;
     margin-bottom: 40px;
   }
+  
   .btn:hover {
     background-color: #0056b3;
     transform: scale(1.05);
     box-shadow: 0 12px 24px rgba(0,0,0,0.3);
   }
-
+  
   .team-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -55,7 +64,9 @@ body {
     width: 90%;
     max-width: 800px;
     margin-bottom: 50px;
+    padding: 0 20px;
   }
+  
   .team-member {
     background: #fff;
     border-radius: 12px;
@@ -63,40 +74,45 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transition: transform 0.3s ease;
   }
+  
   .team-member:hover {
     transform: translateY(-5px);
   }
+  
   .team-member img {
     width: 100%;
     height: auto;
     border-radius: 8px;
   }
+  
   .team-member p {
     margin-top: 10px;
     font-weight: bold;
     color: #333;
   }
-
+  
   footer {
     margin-top: auto;
     padding: 10px;
     font-size: 14px;
     color: #555;
   }
-
+  
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
+  
   @keyframes typing {
     from { width: 0 }
     to { width: 66ch; }
   }
+  
   @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: #007bff; }
   }
-
+  
   @media (max-width: 768px) {
     h1 {
       font-size: 2.5em;
@@ -114,7 +130,7 @@ body {
       gap: 15px;
     }
   }
-
+  
   @media (max-width: 480px) {
     h1 {
       font-size: 2em;
@@ -126,3 +142,4 @@ body {
       font-size: 0.9em;
     }
   }
+  
