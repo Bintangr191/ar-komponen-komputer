@@ -7,11 +7,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1><span class="icon">🖥️</span> AR Komponen Komputer</h1>
-  <p id="desc">Pelajari komponen komputer dengan teknologi Augmented Reality!</p>
-  <a class="btn" id="downloadBtn" href="https://drive.google.com/uc?export=download&id=1UA6zKa2kfmACn4D9wUmqEO_AKUSk21yS" target="_blank">Download Aplikasi</a>
+  <header>
+    <h1><span class="icon">🖥️</span> AR Komponen Komputer</h1>
+    <p id="desc">Pelajari komponen komputer dengan teknologi Augmented Reality!</p>
+    <a class="btn" id="downloadBtn" href="https://drive.google.com/uc?export=download&id=1UA6zKa2kfmACn4D9wUmqEO_AKUSk21yS" target="_blank">Download Aplikasi</a>
+  </header>
 
-  <div class="team-container">
+  <section class="team-container">
     <div class="team-member">
       <img src="gambar/download.jpeg" alt="Pembuat 1">
       <p>Nama 1</p>
@@ -28,25 +30,12 @@
       <img src="gambar/miko.png" alt="Pembuat 4">
       <p>Nama 4</p>
     </div>
-  </div>
+  </section>
 
   <footer>
     Made with ❤️ by Tim AR Komputer
   </footer>
 
-  <script>
-    const btn = document.getElementById('downloadBtn');
-    btn.addEventListener('click', () => {
-      btn.innerText = "Sedang Mengunduh...";
-      setTimeout(() => {
-        btn.innerText = "Download Aplikasi";
-      }, 2000);
-    });
-
-    const desc = document.getElementById('desc');
-    setTimeout(() => {
-      desc.style.borderRight = 'none';
-    }, 4000);
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
