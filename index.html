@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR Komponen Komputer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><span class="icon">🖥️</span> AR Komponen Komputer</h1>
+  <p id="desc">Pelajari komponen komputer dengan teknologi Augmented Reality!</p>
+  <a class="btn" id="downloadBtn" href="https://drive.google.com/uc?export=download&id=1UA6zKa2kfmACn4D9wUmqEO_AKUSk21yS" target="_blank">Download Aplikasi</a>
+
+  <div class="team-container">
+    <div class="team-member">
+      <img src="gambar/download.jpeg" alt="Pembuat 1">
+      <p>Nama 1</p>
+    </div>
+    <div class="team-member">
+      <img src="gambar/gpu.webp" alt="Pembuat 2">
+      <p>Nama 2</p>
+    </div>
+    <div class="team-member">
+      <img src="gambar/intel-celeron-420-scaled.jpg" alt="Pembuat 3">
+      <p>Nama 3</p>
+    </div>
+    <div class="team-member">
+      <img src="gambar/miko.png" alt="Pembuat 4">
+      <p>Nama 4</p>
+    </div>
+  </div>
+
+  <footer>
+    Made with ❤️ by Tim AR Komputer
+  </footer>
+
+  <script>
+    const btn = document.getElementById('downloadBtn');
+    btn.addEventListener('click', () => {
+      btn.innerText = "Sedang Mengunduh...";
+      setTimeout(() => {
+        btn.innerText = "Download Aplikasi";
+      }, 2000);
+    });
+
+    const desc = document.getElementById('desc');
+    setTimeout(() => {
+      desc.style.borderRight = 'none';
+    }, 4000);
+  </script>
+</body>
+</html>

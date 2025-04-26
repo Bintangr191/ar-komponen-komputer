@@ -1,0 +1,99 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  .icon {
+    font-size: 1.2em;
+    vertical-align: middle;
+  }
+  #desc {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #007bff;
+    width: 0;
+    animation: typing 4s steps(66, end) forwards, blink-caret 0.75s step-end infinite;
+  }
+  .btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #007bff;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    animation: fadeIn 2s ease-in-out;
+    margin-bottom: 40px;
+  }
+  .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+  }
+
+  /* Container untuk tim */
+  .team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 800px;
+    margin-bottom: 50px;
+  }
+  .team-member {
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+  }
+  .team-member:hover {
+    transform: translateY(-5px);
+  }
+  .team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .team-member p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  footer {
+    margin-top: auto;
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 66ch; }
+  }
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #007bff; }
+  }
