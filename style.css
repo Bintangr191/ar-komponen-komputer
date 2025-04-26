@@ -1,145 +1,145 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    background: linear-gradient(135deg, #e0eafc, #cfdef3);
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden;
-  }
-  
-  header {
-    margin-top: 20px;
-  }
-  
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  padding: 30px 20px;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.icon {
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+#desc {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #007bff;
+  width: 0;
+  max-width: 100%;
+  animation: typing 4s steps(66, end) forwards, blink-caret 0.75s step-end infinite;
+  box-sizing: border-box;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #007bff;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  width: 90%;
+  margin: 50px 0;
+}
+
+.team-member {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.team-member img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.team-member p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+footer {
+  margin-top: auto;
+  padding: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 66ch; }
+}
+
+@keyframes typingSmall {
+  from { width: 0 }
+  to { width: 40ch; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #007bff; }
+}
+
+@media (max-width: 768px) {
   h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-    animation: fadeIn 1s ease-in-out;
+    font-size: 2.5em;
   }
-  
-  .icon {
-    font-size: 1.2em;
-    vertical-align: middle;
-  }
-  
   #desc {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    height: 30px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid #007bff;
-    width: 0;
-    animation: typing 4s steps(66, end) forwards, blink-caret 0.75s step-end infinite;
+    font-size: 1em;
+    animation: typingSmall 4s steps(50, end) forwards, blink-caret 0.75s step-end infinite;
   }
-  
   .btn {
-    display: inline-block;
-    padding: 15px 40px;
-    background-color: #007bff;
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    animation: fadeIn 2s ease-in-out;
-    margin-bottom: 40px;
+    padding: 12px 30px;
+    font-size: 18px;
   }
-  
-  .btn:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em;
   }
-  
-  .team-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    width: 90%;
-    max-width: 800px;
-    margin-bottom: 50px;
-    padding: 0 20px;
+  #desc {
+    font-size: 0.9em;
+    animation: typingSmall 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
   }
-  
-  .team-member {
-    background: #fff;
-    border-radius: 12px;
-    padding: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
-  }
-  
-  .team-member:hover {
-    transform: translateY(-5px);
-  }
-  
-  .team-member img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
   .team-member p {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #333;
+    font-size: 0.9em;
   }
-  
-  footer {
-    margin-top: auto;
-    padding: 10px;
-    font-size: 14px;
-    color: #555;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 66ch; }
-  }
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #007bff; }
-  }
-  
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 2.5em;
-    }
-    #desc {
-      font-size: 1em;
-    }
-    .btn {
-      padding: 12px 30px;
-      font-size: 18px;
-    }
-    .team-container {
-      width: 100%;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 15px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 2em;
-    }
-    .team-member {
-      padding: 5px;
-    }
-    .team-member p {
-      font-size: 0.9em;
-    }
-  }
-  
+}
