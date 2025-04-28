@@ -109,6 +109,10 @@ body {
     color: inherit;
 }
 
+.team-member-link p {
+    text-decoration: none;
+}
+
 /* Animasi muncul (fade-in) */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
