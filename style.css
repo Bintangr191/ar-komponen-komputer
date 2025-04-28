@@ -84,10 +84,11 @@ body {
 /* Menyesuaikan gambar agar selalu sesuai dengan kotak */
 .team-member img {
     width: 100%;
-    height: 140px;
-    object-fit: cover;
-    object-position: top; /* Fokus bagian atas */
+    height: 140px; 
+    object-fit: contain; 
+    object-position: center top;
     border-radius: 10px;
+    background-color: #ffffff;
 }
 
 /* Deskripsi anggota tim */
