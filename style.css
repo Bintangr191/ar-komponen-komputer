@@ -105,12 +105,15 @@ body {
 }
 
 .team-member-link {
-    text-decoration: none;
-    color: inherit;
+  display: block;
 }
 
-.team-member-link p {
-    text-decoration: none;
+.team-member-link img {
+  transition: transform 0.3s ease;
+}
+
+.team-member-link:hover img {
+  transform: scale(1.05);
 }
 
 /* Animasi muncul (fade-in) */
