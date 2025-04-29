@@ -169,7 +169,30 @@ footer {
 
 /* Responsive Settings */
 /* HP Portrait */
-@media (max-width: 768px) and (orientation: portrait) {
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    #desc {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+    }
+    .biodata {
+        padding: 15px;
+    }
+    .team-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
+/* HP Landscape */
+@media (min-width: 481px) and (max-width: 768px) and (orientation: landscape) {
     h1 {
         font-size: 2rem;
     }
@@ -178,7 +201,7 @@ footer {
         padding: 0 15px;
     }
     .btn {
-        font-size: 0.95rem;
+        font-size: 1rem;
         padding: 10px 20px;
     }
     .biodata {
@@ -186,14 +209,24 @@ footer {
     }
     .team-container {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-        overflow-x: auto;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 }
 
-/* HP Landscape */
-@media (max-width: 768px) and (orientation: landscape) {
+/* Tablet Portrait */
+@media (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    #desc {
+        font-size: 1.2rem;
+        padding: 0 20px;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 10px 22px;
+    }
     .team-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -201,32 +234,46 @@ footer {
     }
 }
 
-/* Tablet */
+/* Tablet Landscape */
 @media (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    #desc {
+        font-size: 1.3rem;
+        padding: 0 30px;
+    }
+    .btn {
+        font-size: 1.05rem;
+        padding: 12px 26px;
+    }
     .team-container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
     }
 }
 
-/* Laptop & Desktop */
+/* Desktop */
 @media (min-width: 1025px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+    #desc {
+        font-size: 1.4rem;
+        max-width: 900px;
+        margin: 10px auto 20px;
+        padding: 0 40px;
+    }
+    .btn {
+        font-size: 1.1rem;
+        padding: 14px 32px;
+    }
     .team-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 40px;
     }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-    #desc {
-        font-size: 1.4rem;
-    }
-    .btn {
-        font-size: 1.1rem;
-        padding: 12px 30px;
-    }
 }
+
 
