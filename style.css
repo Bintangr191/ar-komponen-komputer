@@ -191,7 +191,7 @@ footer {
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .team-container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
 }
