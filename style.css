@@ -168,7 +168,8 @@ footer {
 }
 
 /* Responsive Settings */
-@media (max-width: 768px) {
+/* HP Portrait */
+@media (max-width: 768px) and (orientation: portrait) {
     h1 {
         font-size: 2rem;
     }
@@ -184,20 +185,35 @@ footer {
         padding: 20px;
     }
     .team-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        overflow-x: auto;
     }
 }
 
+/* HP Landscape */
+@media (max-width: 768px) and (orientation: landscape) {
+    .team-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
     .team-container {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
 }
 
+/* Laptop & Desktop */
 @media (min-width: 1025px) {
     .team-container {
+        display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 40px;
     }
@@ -213,3 +229,4 @@ footer {
         padding: 12px 30px;
     }
 }
+
