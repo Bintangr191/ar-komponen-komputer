@@ -216,3 +216,27 @@ footer {
         padding-right: 60px;
     }
 }
+
+@media (max-width: 600px) {
+    .biodata {
+        width: 90%;
+        margin: 20px auto;
+        height: auto; 
+        padding: 20px;
+    }
+
+    .biodata img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    h1, #desc {
+        font-size: 1.8rem;
+    }
+}
+
