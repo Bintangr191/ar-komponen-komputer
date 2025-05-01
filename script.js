@@ -1,14 +1,3 @@
-// Download Button Animation
-const btn = document.getElementById('downloadBtn');
-if (btn) {
-  btn.addEventListener('click', () => {
-    btn.innerText = "Sedang Mengunduh...";
-    setTimeout(() => {
-      btn.innerText = "Download Aplikasi";
-    }, 2000);
-  });
-}
-
 // Typing Effect
 const desc = document.getElementById('desc');
 const text = "Pelajari komponen komputer dengan teknologi Augmented Reality!";
