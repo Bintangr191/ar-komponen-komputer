@@ -3,16 +3,16 @@ body {
     text-align: center;
     background: linear-gradient(135deg, #e0eafc, #cfdef3);
     margin: 0;
+    padding: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
-    padding: 20px;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* Header */
+/* === HEADER STYLES === */
 header {
     margin-top: 40px;
     width: 100%;
@@ -37,13 +37,101 @@ h1, #desc {
     letter-spacing: 0.5px;
     word-break: break-word;
     text-align: center;
-    white-space: normal;
     padding: 0 20px;
     animation: fadeIn 1.2s ease-in-out;
 }
 
+/* === DOWNLOAD PAGE STYLE === */
+.download-header {
+    margin-top: 0;
+    background: #004080;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+    width: 100%; 
+    position: relative; 
+    z-index: 100;
+}
 
-/* Biodata Section */
+
+.download-header h1 {
+    margin: 0;
+    font-size: 6vw;
+}
+
+.download-header p {
+    margin-top: 10px;
+    font-size: 3vw; 
+    font-weight: 300;
+}
+
+/* === CONTAINER AND VERSI STYLES === */
+.container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+    box-sizing: border-box;  
+    aspect-ratio: 1 / 1;  
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.versi {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 6px solid #004080;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.versi:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.versi h2 {
+    margin-top: 0;
+    color: #004080;
+    font-size: 1.5rem;
+}
+
+.versi ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    word-wrap: break-word;       
+    overflow-wrap: break-word;    
+}
+
+.versi li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+    color: #333;
+    word-break: break-word;        
+}
+
+.versi a {
+    display: inline-block;
+    margin-top: 15px;
+    background: #007bff;
+    color: white;
+    padding: 10px 22px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.versi a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* === BIODATA SECTION === */
 .biodata {
     width: 100%;
     max-width: 600px;
@@ -72,7 +160,7 @@ h1, #desc {
     font-size: 1.1em;
 }
 
-/* Button */
+/* === BUTTON STYLE === */
 .btn {
     display: inline-block;
     padding: 12px 30px;
@@ -93,7 +181,7 @@ h1, #desc {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
-/* Team Member */
+/* === TEAM MEMBER SECTION === */
 .team-container {
     display: flex;
     flex-wrap: wrap;
@@ -152,7 +240,7 @@ h1, #desc {
     transform: scale(1.05);
 }
 
-/* Footer */
+/* === FOOTER === */
 footer {
     margin-top: 40px;
     padding: 10px;
@@ -161,76 +249,118 @@ footer {
     text-align: center;
 }
 
-/* Animations */
+/* === ANIMATIONS === */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive Settings */
-/* === HP Portrait (≤480px) === */
+/* === RESPONSIVE SETTINGS === */
+
+/* === Mobile (≤480px) === */
 @media (max-width: 480px) {
     h1 {
         font-size: 1.8rem;
     }
+
     #desc {
         font-size: 1rem;
         padding: 0 10px;
     }
+
     .btn {
         font-size: 0.9rem;
         padding: 8px 18px;
     }
+
     .biodata {
         padding: 15px;
     }
+
     .team-container {
         display: grid;
         grid-template-columns: 1fr;
         gap: 10px;
     }
+
+    .container {
+        max-width: 100%; 
+        padding: 0 15px;
+        aspect-ratio: 1 / 1;  
+    }
+
+    .download-header h1 {
+        font-size: 8vw; 
+    }
+
+    .download-header p {
+        font-size: 5vw; 
+    }
 }
 
-/* === HP Landscape & Tablet Portrait (481px–768px) === */
+/* === Tablet Portrait & Landscape (481px–768px) === */
 @media (min-width: 481px) and (max-width: 768px) {
     h1 {
         font-size: 2.1rem;
     }
+
     #desc {
         font-size: 1.15rem;
         padding: 0 18px;
     }
+
     .btn {
         font-size: 1rem;
         padding: 10px 22px;
     }
+
     .biodata {
         padding: 20px;
     }
+
     .team-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+
+    .download-header h1 {
+        font-size: 7vw; 
+    }
+
+    .download-header p {
+        font-size: 4vw;
+    }
 }
 
-/* === Tablet Landscape (769px–1024px) === */
+/* === Tablet Landscape & Small Desktop (769px–1024px) === */
 @media (min-width: 769px) and (max-width: 1024px) {
     h1 {
         font-size: 2.5rem;
     }
+
     #desc {
         font-size: 1.3rem;
         padding: 0 30px;
     }
+
     .btn {
         font-size: 1.05rem;
         padding: 12px 26px;
     }
+
     .team-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
+    }
+
+    .download-header h1 {
+        font-size: 5vw; 
+    }
+
+    .download-header p {
+        font-size: 3.5vw; 
     }
 }
 
@@ -239,22 +369,19 @@ footer {
     h1 {
         font-size: 2.8rem;
     }
+
     #desc {
         font-size: 1.4rem;
         max-width: 900px;
         margin: 10px auto 20px;
         padding: 0 40px;
     }
-    .btn {
-        font-size: 1.1rem;
-        padding: 14px 32px;
+
+    .download-header h1 {
+        font-size: 2.2rem; 
     }
-    .team-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 40px;
+
+    .download-header p {
+        font-size: 1.2rem; 
     }
 }
-
-
-
