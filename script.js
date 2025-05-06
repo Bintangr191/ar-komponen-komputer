@@ -73,8 +73,55 @@ function loadBiodata() {
         console.log(`Element dengan id "${id}" tidak ditemukan`);
       }
     }
+
+    // Mengisi data biodata berdasarkan ID
+    setTextContent("nama", p.nama);
+    setTextContent("role", p.role);
+    setTextContent("email", p.email);
+    setTextContent("asal", p.asal);
+    setTextContent("hobi", p.hobi);
+
+    const foto = document.getElementById("foto");
+    if (foto) {
+      foto.src = p.foto;
+      foto.alt = p.nama;
+    }
+
+    // Mengisi footer
+    const footerNamaElement = document.getElementById("footerNama");
+    if (footerNamaElement) {
+      footerNamaElement.textContent = p.nama;
+    }
+  } else {
+    console.log('Data tidak ditemukan untuk ID:', id);
+    // Memberikan umpan balik jika data tidak ditemukan
+    const el = document.getElementById("nama");
+    if (el) {
+      el.textContent = "Data Pembuat Tidak Ditemukan";
+    }
   }
 }
+
+// Inisialisasi Saat Load
+window.addEventListener('load', () => {
+  // Jalankan typing effect jika ada elemen desc
+  if (desc) {
+    setTimeout(typeWriter, 500);
+  }
+
+  // Jalankan animasi team-member jika ada
+  const teamMembers = document.querySelectorAll('.team-member');
+  if (teamMembers.length > 0) {
+    teamMembers.forEach(member => {
+      member.classList.add('show');
+    });
+  }
+
+  // Jalankan biodata jika halaman memiliki elemen nama
+  if (document.getElementById('nama')) {
+    loadBiodata();
+  }
+})
 
 // Inisialisasi Saat Load
 window.addEventListener('load', () => {
