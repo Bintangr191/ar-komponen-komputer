@@ -87,6 +87,21 @@ function loadBiodata() {
       foto.alt = p.nama;
     }
 
+        // Mengisi footer
+    const footerNamaElement = document.getElementById("footerNama");
+    if (footerNamaElement) {
+      footerNamaElement.textContent = p.nama;
+    }
+  } else {
+    console.log('Data tidak ditemukan untuk ID:', id);
+    // Memberikan umpan balik jika data tidak ditemukan
+    const el = document.getElementById("nama");
+    if (el) {
+      el.textContent = "Data Pembuat Tidak Ditemukan";
+    }
+  }
+}
+
 // Inisialisasi Saat Load
 window.addEventListener('load', () => {
   // Jalankan typing effect jika ada elemen desc
