@@ -121,28 +121,7 @@ window.addEventListener('load', () => {
   if (document.getElementById('nama')) {
     loadBiodata();
   }
-})
-
-// Inisialisasi Saat Load
-window.addEventListener('load', () => {
-  // Jalankan typing effect jika ada elemen desc
-  if (desc) {
-    setTimeout(typeWriter, 500);
-  }
-
-  // Jalankan animasi team-member jika ada
-  const teamMembers = document.querySelectorAll('.team-member');
-  if (teamMembers.length > 0) {
-    teamMembers.forEach(member => {
-      member.classList.add('show');
-    });
-  }
-
-  // Jalankan biodata jika halaman memiliki elemen nama
-  if (document.getElementById('nama')) {
-    loadBiodata();
-  }
-})
+});
 
 function initDownloadPopup() {
   const unduhButtons = document.querySelectorAll(".btn-unduh");
