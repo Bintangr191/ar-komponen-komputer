@@ -73,32 +73,6 @@ function loadBiodata() {
         console.log(`Element dengan id "${id}" tidak ditemukan`);
       }
     }
-
-    // Mengisi data biodata berdasarkan ID
-    setTextContent("nama", p.nama);
-    setTextContent("role", p.role);
-    setTextContent("email", p.email);
-    setTextContent("asal", p.asal);
-    setTextContent("hobi", p.hobi);
-
-    const foto = document.getElementById("foto");
-    if (foto) {
-      foto.src = p.foto;
-      foto.alt = p.nama;
-    }
-
-    // Mengisi footer
-    const footerNamaElement = document.getElementById("footerNama");
-    if (footerNamaElement) {
-      footerNamaElement.textContent = p.nama;
-    }
-  } else {
-    console.log('Data tidak ditemukan untuk ID:', id);
-    // Memberikan umpan balik jika data tidak ditemukan
-    const el = document.getElementById("nama");
-    if (el) {
-      el.textContent = "Data Pembuat Tidak Ditemukan";
-    }
   }
 }
 
@@ -121,4 +95,57 @@ window.addEventListener('load', () => {
   if (document.getElementById('nama')) {
     loadBiodata();
   }
+})
+
+function initDownloadPopup() {
+  const unduhButtons = document.querySelectorAll(".btn-unduh");
+  const modal = document.getElementById("unduhModal");
+  const closeModal = document.querySelector(".close");
+  const btnDrive = document.getElementById("btn-drive");
+  const btnSourceforge = document.getElementById("btn-sourceforge");
+
+  const links = {
+    v13: {
+      drive: "https://drive.google.com/uc?export=download&id=1QGH3nRk3hK9j02YkNL8wTRSWoTFElaIF",
+      sf: "https://sourceforge.net/projects/ar-project-rakit/files/Augmented_reality_(1,3).zip/download"
+    },
+    v12: {
+      drive: "https://drive.google.com/uc?export=download&id=1IYt9fQcTvPkQOxTPa2ZtJKq9-ofBilBI",
+      sf: "https://sourceforge.net/projects/ar-project-rakit/files/Augmented_reality_(1,2).zip/download"
+    },
+    v10: {
+      drive: "https://drive.google.com/uc?export=download&id=1BHBZIfJbHPqhkhSgSpDn8ZrubzhXxaNI",
+      sf: "https://sourceforge.net/projects/ar-project-rakit/files/Augmented_reality_(1,0).zip/download"
+    }
+  };
+
+// Ketika tombol unduh diklik
+unduhButtons.forEach(button => {
+  button.addEventListener("click", function() {
+    const version = button.getAttribute("data-version");
+    btnDrive.href = links[version].drive;
+    btnSourceforge.href = links[version].sf;
+
+    // Tampilkan modal
+    modal.style.display = "block";
+  });
+});
+
+
+  if (closeModal) {
+    closeModal.onclick = () => {
+      modal.style.display = "none";
+    };
+  }
+
+  window.onclick = e => {
+    if (e.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+}
+
+// Panggil fungsi saat halaman dimuat
+window.addEventListener('load', () => {
+  initDownloadPopup();
 });
