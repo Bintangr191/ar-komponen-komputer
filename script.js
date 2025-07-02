@@ -131,6 +131,10 @@ function initDownloadPopup() {
   const btnSourceforge = document.getElementById("btn-sourceforge");
 
   const links = {
+    v15: {
+      drive: "https://drive.google.com/file/d/1XECKETs-W0mJr1B_OzG0kwOtw3hANLhZ/view?usp=drivesdk ",
+      sf: ""
+    },
     v13: {
       drive: "https://drive.google.com/uc?export=download&id=1QGH3nRk3hK9j02YkNL8wTRSWoTFElaIF",
       sf: "https://sourceforge.net/projects/ar-project-rakit/files/Augmented_reality_(1,3).zip/download"
